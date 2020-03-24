@@ -1,0 +1,32 @@
+.tweeting-container {
+  border-bottom: 3px solid #545149;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweeting-container label {
+  margin-right: 10px;
+}
+
+.tweeting-container textarea {
+  border: none;
+  background: none;
+  resize: none;
+  height: 30px;
+  font-size: 23px;
+  width: 50%;
+}
+
+.button-counter-container {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
+.button-counter-container button {
+  color: #fff;
+  background-color: #4056A1;
+  /* padding: 1px 10px 2px; */
+}

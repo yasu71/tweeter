@@ -1,0 +1,20 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c2f3ff;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  flex-direction: column;
+  position: relative;
+  top: 120px;
+}
+
+.avatar {
+  position: relative;
+}
+
+.avatar-image {
+  position: relative;
+}
