@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,600,600i&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="./styles/layout.css" type="text/css"/>
@@ -22,6 +22,8 @@
     <script type="text/javascript" src="./scripts/client.js"></script>
     <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/76e68c1895.js" crossorigin="anonymous"></script>
     
   </head>
   <body>
@@ -35,7 +37,7 @@
       </div>
       
     </nav>
-    <header>
+    <header id="profile">
       <div class="avatar">
           <img src="./images/profile-hex.png"> 
       </div>
@@ -44,7 +46,6 @@
           <h2>Yasu <span style="font-weight: 100;">Shimosaka</span></h2>
       </div>
     </header>
-    
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
@@ -59,6 +60,30 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section id="tweeting-container">
+        <article>
+          <header>
+            <div class="tweet-profile">
+              <div class="profile-image"><img src="./images/dog.svg"></div>
+              <div class="profile-name">Newton</div>
+            </div>
+            <div class="user-name">@Sirlsaac</div>
+          </header>
+          <div class="tweet-content">
+            <div>If I have seen further it is by standing on the shoulders of giants</div>
+          </div>
+          <footer>
+            <div class="posted-date">10 days ago</div>
+            <div>
+              <ul>
+                <li><i class="fab fa-font-awesome-flag"></i></li>
+                <li><i class="fas fa-retweet"></i></li>
+                <li><i class="fas fa-heart"></i></li>
+              </ul>
+            </div>
+          </footer>
+        </article>
       </section>
     </main>
   </body>

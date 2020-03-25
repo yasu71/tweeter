@@ -25,11 +25,94 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-   width: 90%;
-   height: 500px;
-   margin: auto;
-   background-color: #f4f1ec;
-   position: relative;
-   top: 120px;
- }
+ /****** tweeting section START ******/
+
+main {
+  width: 90%;
+  height: 500px;
+  margin: auto;
+  background-color: #f4f1ec;
+  position: relative;
+  top: 120px;
+}
+
+/****** tweeting section END ******/
+
+/****** tweeted post section START ******/
+
+#tweeting-container {
+  padding: 60px 0 20px;
+}
+
+#tweeting-container article {
+  border: 3px solid #545149;
+  display: flex;
+  flex-direction: column;
+  padding: 7px; 
+}
+
+#tweeting-container header {
+  background-color: #f4f1ec;
+  background-image: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+#tweeting-container .tweet-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tweeting-container header .profile-image {
+  margin-right: 10px;
+}
+
+#tweeting-container header .profile-image img {
+  width: 55px;
+}
+
+#tweeting-container header .user-name {
+  color: #d3d8e6;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#tweeting-container .tweet-content {
+  border-bottom: 4px solid #545149;
+  padding: 10px 15px 30px;
+  font-weight: 600;
+}
+
+#tweeting-container footer {
+  padding: 10px 15px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweeting-container footer .posted-date {
+  font-size: 25px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#tweeting-container footer ul{
+  padding: 10px 15px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweeting-container footer ul li{
+  list-style: none;
+  color: #e5c9d9;    
+  font-size: 20px;
+  width: 30px;
+  /* padding-right: 5px; */
+  text-align: center;
+}
+
+ /****** tweeted post section END ******/
