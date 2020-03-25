@@ -1,5 +1,5 @@
-header {
-  height: 400px;
+#profile {
+  height: 17em;
   width: 100%;
   display: flex;
   align-items: center;
@@ -8,7 +8,7 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
   flex-direction: column;
   position: relative;
-  top: 120px;
+  top: 5em;
 }
 
 .avatar {

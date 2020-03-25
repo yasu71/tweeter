@@ -30,7 +30,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <div>
-        <span style="font-family: 'Bungee', cursive;">tweeter</span>
+        <span class="title">tweeter</span>
       </div>
       <div>
         <div>Write a new tweet</div>
@@ -43,7 +43,7 @@
       </div>
       <br>
       <div class="profile-name">
-          <h2>Yasu <span style="font-weight: 100;">Shimosaka</span></h2>
+          <h2>Yasu <span class="light-text">Shimosaka</span></h2>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
@@ -51,7 +51,7 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
-          <div class="tweeting-container">
+          <div class="composing-container">
             <label for="tweet-text"><b>What are you humming about?</b></label>
             <textarea name="text" id="tweet-text"></textarea>
           </div>
@@ -65,8 +65,8 @@
         <article>
           <header>
             <div class="tweet-profile">
-              <div class="profile-image"><img src="./images/dog.svg"></div>
-              <div class="profile-name">Newton</div>
+              <img src="./images/dog.png">
+              Newton
             </div>
             <div class="user-name">@Sirlsaac</div>
           </header>

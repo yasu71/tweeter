@@ -25,30 +25,41 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- /****** tweeting section START ******/
+ /****** nav and header section START ******/
+
+ nav .title {
+  font-family: 'Bungee', cursive;
+}
+
+.light-text {
+  font-weight: 300;
+} 
+
+/****** nav and header section END ******/
 
 main {
   width: 90%;
-  height: 500px;
   margin: auto;
   background-color: #f4f1ec;
   position: relative;
-  top: 120px;
+  top: 5em;
 }
-
-/****** tweeting section END ******/
 
 /****** tweeted post section START ******/
 
 #tweeting-container {
-  padding: 60px 0 20px;
+  margin: 2.8em 0 1em;
 }
 
 #tweeting-container article {
-  border: 3px solid #545149;
+  border: 0.12em solid #545149;
   display: flex;
   flex-direction: column;
-  padding: 7px; 
+  padding: 0.4em; 
+}
+
+#tweeting-container article:hover {
+  box-shadow: 0.2em 0.2em 0.2em #adadad;
 }
 
 #tweeting-container header {
@@ -57,49 +68,59 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
+  padding: 0.2em 0.7em;
 }
 
 #tweeting-container .tweet-profile {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 65%;
 }
 
-#tweeting-container header .profile-image {
-  margin-right: 10px;
+#tweeting-container article:hover .tweet-profile {
+  opacity: 100%;
 }
 
-#tweeting-container header .profile-image img {
-  width: 55px;
+#tweeting-container header img {
+  margin-right: 0.7em;
+  width: 2.3em;
 }
 
 #tweeting-container header .user-name {
-  color: #d3d8e6;
-  font-size: 22px;
-  font-weight: 600;
+  display: none;
+  color: #bec2cc;
+  font-size: 0.9em;
+}
+
+#tweeting-container article:hover .user-name {
+  display: block;
 }
 
 #tweeting-container .tweet-content {
-  border-bottom: 4px solid #545149;
-  padding: 10px 15px 30px;
-  font-weight: 600;
+  border-bottom: 0.12em solid #545149;
+  padding: 0.3em 0.6em 1.1em;
 }
 
+#tweeting-container article:hover .tweet-content {
+  font-weight: 600;
+} 
+
 #tweeting-container footer {
-  padding: 10px 15px 5px;
+  padding: 0.7em 0.6em 0.25em;
   display: flex;
   justify-content: space-between;
 }
 
 #tweeting-container footer .posted-date {
-  font-size: 25px;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 0.75em;
 }
 
+#tweeting-container article:hover .posted-date {
+  font-weight: 600;
+} 
+
 #tweeting-container footer ul{
-  padding: 10px 15px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -109,10 +130,14 @@ main {
 #tweeting-container footer ul li{
   list-style: none;
   color: #e5c9d9;    
-  font-size: 20px;
-  width: 30px;
-  /* padding-right: 5px; */
+  font-size: 0.84em;
+  width: 1.5em;
   text-align: center;
+  cursor: pointer;
 }
 
- /****** tweeted post section END ******/
+#tweeting-container footer ul li:hover {
+  color: #e180c3;
+}
+
+/****** tweeted post section END ******/
