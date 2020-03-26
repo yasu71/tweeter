@@ -1,6 +1,6 @@
-nav {
+.nav-bar {
   position: fixed;
-  height: 4em; /* 120px */
+  height: 4em;
   width: 100%;
   justify-content: space-between;
   background-color: #4056A1;
@@ -11,13 +11,17 @@ nav {
   align-items: center;
 }
 
-nav .arrow {
+.nav-bar .title {
+  font-family: 'Bungee', cursive;
+}
+
+.nav-bar .arrow {
   text-align: center;
   color: #bde691;
   margin-top: 2px;
 }
 
-nav .arrow i {
+.nav-bar .arrow i {
   animation: upDown 2s infinite;
   position: relative;
   animation-timing-function: linear;

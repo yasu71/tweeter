@@ -27,7 +27,7 @@ body {
 
 /****** main container START ******/
 
-main {
+.container {
   width: 90%;
   margin: auto;
   background-color: #f4f1ec;

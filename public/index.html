@@ -33,7 +33,7 @@
   </head>
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class="nav-bar">
       <div>
         <span style="font-family: 'Bungee', cursive;">tweeter</span>
       </div>
@@ -41,40 +41,41 @@
         <div><span class="heavy-text">Write</span> a new tweet</div>
         <div class="arrow"><i class="fas fa-angle-double-down"></i></div>
       </div>
-      
     </nav>
-    <header id="profile">
-      <div class="avatar">
-          <img src="./images/profile-hex.png"> 
-      </div>
-      <div class="profile-name">
-          <h2><span class="heavy-text">Yasu</span> Shimosaka</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div class="error-message-container">
-          <div class="error-message error-no-tweet"><i class="fas fa-bullhorn"></i> No Tweet! Let's tweet how you're doing today! <i class="fas fa-bullhorn"></i>
-          </div>
-          <div class="error-message error-over-texts"><i class="fas fa-exclamation-triangle"></i> Too Long! Please tweet under 140 characters <i class="fas fa-exclamation-triangle"></i>
-          </div>
+    <div class="profile-tweet-container">
+      <header id="profile">
+        <div class="avatar">
+            <img src="./images/profile-hex.png"> 
         </div>
-        <div id="component-container">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
-          <div class="composing-container">
-            <label for="tweet-text"><b>What are you humming about?</b></label>
-            <textarea name="text" id="tweet-text"></textarea>
+        <div class="profile-name">
+            <h2><span class="heavy-text">Yasu</span> Shimosaka</h2>
+        </div>
+      </header>
+    <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="error-message-container">
+            <div class="error-message error-no-tweet"><i class="fas fa-bullhorn"></i> No Tweet! Let's tweet how you're doing today! <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="error-message error-over-texts"><i class="fas fa-exclamation-triangle"></i> Too Long! Please tweet under 140 characters <i class="fas fa-exclamation-triangle"></i>
+            </div>
           </div>
-          <div class="button-counter-container">
-            <button type="submit" id="submit-tweet">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </div>
-      </section>
-      <section id="tweets-container"></section>
-    </main>
+          <div id="component-container">
+          <h2>Compose Tweet</h2>
+          <form action="/tweets" method="POST">
+            <div class="composing-container">
+              <label for="tweet-text"><b>What are you humming about?</b></label>
+              <textarea name="text" id="tweet-text"></textarea>
+            </div>
+            <div class="button-counter-container">
+              <button type="submit" id="submit-tweet">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </div>
+        </section>
+        <section id="tweets-container"></section>
+      </main>
+    </div>
   </body>
 </html>
