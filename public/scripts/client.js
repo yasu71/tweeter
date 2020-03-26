@@ -38,21 +38,28 @@ $(document).ready(() => {
     const $footer = $("<footer>").append($createdAt, $iconDiv);
     const $article = $("<article>").append($header, $tweetContent, $footer);
 
-    
     return $article;
   };
 
   const $form = $("form");
 
   $form.on("submit", () => {
+
     event.preventDefault();
     const formData = $form.serialize();
+    // const $tweetsContainer = $("#tweets-container");
 
-    $.post("/tweets", formData)
-      .then((res) => {
-        $("#tweet-text").val();
-        loadtweets();
-      });
+    if (!$("#tweet-text").val()) {
+      alert("You didn't tweet anything! X(");
+    } else if ($("#tweet-text").val().length > 140){
+      alert("Yout tweet is too wrong! X(");
+    } else {
+      $.post("/tweets", formData)
+        .then((res) => {
+          $("#tweet-text").val();
+          loadtweets();
+        });
+    }
   });
 
   const loadtweets = () => {
