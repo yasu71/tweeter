@@ -31,40 +31,43 @@ $(document).ready(() => {
     const $ul = $("<ul>").append($firstList, $secondList, $thirdList)
     const $iconDiv = $("<div>").append($ul);
     let $createdAt = $("<div>").addClass("posted-date");
+
     let date = new Date();
     let currentDate = date.getTime();
     let dateDifference = Math.floor((currentDate - tweet.created_at)/1000/60/60/24);
     $createdAt.text(`${dateDifference} days ago`);
+
     const $footer = $("<footer>").append($createdAt, $iconDiv);
     const $article = $("<article>").append($header, $tweetContent, $footer);
 
     return $article;
   };
 
+  const clearErrors = function () {
+    $(".error-over-texts").hide();
+    $(".error-no-tweet").hide();
+  };
+
   const $form = $("form");
+  
   $form.on("submit", () => {
     event.preventDefault();
+    clearErrors();
     const formData = $form.serialize();
-    // const $tweetsContainer = $("#tweets-container");
     if (!$("#tweet-text").val()) {
-      alert("You didn't tweet anything! X(");
-    } else if ($("#tweet-text").val().length > 140){
-      alert("Yout tweet is too wrong! X(");
-    } else {
-      $.post("/tweets", formData)
-        .then((res) => {
-          $("#tweet-text").val();
-          loadtweets();
-        });
-    }
+      $(".error-no-tweet").slideDown();
+      return;
+    } 
+    if ($("#tweet-text").val().length > 140){
+      $(".error-over-texts").slideDown();
+      return;
+    } 
+    $.post("/tweets", formData)
+      .then((res) => {
+        $("#tweet-text").val("");
+        loadtweets();
+      });
   });
-
-  // reset form
-  // $("#submit-tweet").click(() => {
-  //  if (!$("#submit-tweet")){
-  //    $("form").reset();
-  //  }
-  // });
 
   const loadtweets = () => {
     $.get("/tweets")
