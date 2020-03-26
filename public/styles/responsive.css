@@ -1,0 +1,45 @@
+
+@media (max-width: 1024px) {
+  nav {
+    position: static;
+    background: none;
+    color: #315371;
+    background-color: #c2f3ff;
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  }
+
+  #profile {
+   top: 0;
+  }
+
+  main {
+    top: 0;
+  }
+
+  nav .arrow {
+    color: #e85272;
+  }
+}
+
+@media (min-width: 1025px) {
+  #profile {
+    float: left;
+    width: 28%;
+    margin: 3%;
+    position: fixed;
+  }
+
+  .container {
+    float: right;
+    width: 58%;
+    margin: 3%;
+  }
+
+  .new-tweet .error-message {
+    margin: 0 0 0.83em;
+  }
+
+  #component-container h2 {
+    margin-top: 0px;
+  }
+}

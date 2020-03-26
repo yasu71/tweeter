@@ -8,13 +8,21 @@
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
   flex-direction: column;
   position: relative;
-  top: 5em;
+  top: 4em;
 }
 
-.avatar {
+header .avatar {
   position: relative;
 }
 
-.avatar-image {
+header .avatar-image {
   position: relative;
+}
+
+header h2 {
+  font-weight: 300;
+} 
+
+.heavy-text {
+  font-weight: 700;
 }

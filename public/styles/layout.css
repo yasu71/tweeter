@@ -25,17 +25,6 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- /****** nav and header section START ******/
-
- nav .title {
-  font-family: 'Bungee', cursive;
-}
-
-.light-text {
-  font-weight: 300;
-} 
-
-/****** nav and header section END ******/
 /****** main container START ******/
 
 main {
@@ -43,7 +32,7 @@ main {
   margin: auto;
   background-color: #f4f1ec;
   position: relative;
-  top: 5em;
+  top: 4em;
 }
 
 /****** main container END ******/
