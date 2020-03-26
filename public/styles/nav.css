@@ -8,4 +8,11 @@ nav {
   color: #ffffff;
   z-index: 100;
   padding: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+nav .arrow {
+  text-align: center;
+  color: #91e2e6;
 }
