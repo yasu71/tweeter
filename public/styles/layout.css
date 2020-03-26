@@ -36,6 +36,7 @@ body {
 } 
 
 /****** nav and header section END ******/
+/****** main container START ******/
 
 main {
   width: 90%;
@@ -45,89 +46,91 @@ main {
   top: 5em;
 }
 
+/****** main container END ******/
 /****** tweeted post section START ******/
 
-#tweeting-container {
+#tweets-container {
   margin: 2.8em 0 1em;
 }
 
-#tweeting-container article {
+#tweets-container article {
   border: 0.12em solid #545149;
   display: flex;
   flex-direction: column;
-  padding: 0.4em; 
+  padding: 0.4em;
+  margin-bottom: 1.3em;
 }
 
-#tweeting-container article:hover {
+#tweets-container article:hover {
   box-shadow: 0.2em 0.2em 0.2em #adadad;
 }
 
-#tweeting-container header {
+#tweets-container header {
   background-color: #f4f1ec;
   background-image: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2em 0.7em;
+  padding: 0.2em 0.6em;
 }
 
-#tweeting-container .tweet-profile {
+#tweets-container .tweet-profile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   opacity: 65%;
 }
 
-#tweeting-container article:hover .tweet-profile {
+#tweets-container article:hover .tweet-profile {
   opacity: 100%;
 }
 
-#tweeting-container header img {
+#tweets-container header img {
   margin-right: 0.7em;
   width: 2.3em;
 }
 
-#tweeting-container header .user-name {
+#tweets-container header .user-name {
   display: none;
   color: #bec2cc;
   font-size: 0.9em;
 }
 
-#tweeting-container article:hover .user-name {
+#tweets-container article:hover .user-name {
   display: block;
 }
 
-#tweeting-container .tweet-content {
+#tweets-container .tweet-content {
   border-bottom: 0.12em solid #545149;
   padding: 0.3em 0.6em 1.1em;
 }
 
-#tweeting-container article:hover .tweet-content {
+#tweets-container article:hover .tweet-content {
   font-weight: 600;
 } 
 
-#tweeting-container footer {
+#tweets-container footer {
   padding: 0.7em 0.6em 0.25em;
   display: flex;
   justify-content: space-between;
 }
 
-#tweeting-container footer .posted-date {
+#tweets-container footer .posted-date {
   font-size: 0.75em;
 }
 
-#tweeting-container article:hover .posted-date {
+#tweets-container article:hover .posted-date {
   font-weight: 600;
 } 
 
-#tweeting-container footer ul{
+#tweets-container footer ul{
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
 }
 
-#tweeting-container footer ul li{
+#tweets-container footer ul li{
   list-style: none;
   color: #e5c9d9;    
   font-size: 0.84em;
@@ -136,7 +139,7 @@ main {
   cursor: pointer;
 }
 
-#tweeting-container footer ul li:hover {
+#tweets-container footer ul li:hover {
   color: #e180c3;
 }
 

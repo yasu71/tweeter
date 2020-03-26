@@ -50,6 +50,13 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="error-message-container">
+          <div class="error-message error-no-tweet"><i class="fas fa-bullhorn"></i> No Tweet! Let's tweet how you're doing today! <i class="fas fa-bullhorn"></i>
+          </div>
+          <div class="error-message error-over-texts"><i class="fas fa-exclamation-triangle"></i> Too Long! Please tweet under 140 characters <i class="fas fa-exclamation-triangle"></i>
+          </div>
+        </div>
+        <div id="component-container">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
           <div class="composing-container">
@@ -61,31 +68,9 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </div>
       </section>
-      <section id="tweets-container">
-        <!-- <article>
-          <header>
-            <div class="tweet-profile">
-              <div class="profile-image"><img src="./images/dog.png"></div>
-              <div class="profile-name">Newton</div>
-            </div>
-            <div class="user-name">@Sirlsaac</div>
-          </header>
-          <div class="tweet-content">
-            If I have seen further it is by standing on the shoulders of giants
-          </div>
-          <footer>
-            <div class="posted-date">10 days ago</div>
-            <div>
-              <ul>
-                <li><i class="fab fa-font-awesome-flag"></i></li>
-                <li><i class="fas fa-retweet"></i></li>
-                <li><i class="fas fa-heart"></i></li>
-              </ul>
-            </div>
-          </footer>
-        </article> -->
-      </section>
+      <section id="tweets-container"></section>
     </main>
   </body>
 </html>
