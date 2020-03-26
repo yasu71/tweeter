@@ -10,7 +10,7 @@ $(document).ready(() => {
     const $tweetsContainer = $("#tweets-container");
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $tweetsContainer.append($tweet);
+      $tweetsContainer.prepend($tweet);
     } 
   };
 
@@ -42,13 +42,10 @@ $(document).ready(() => {
   };
 
   const $form = $("form");
-
   $form.on("submit", () => {
-
     event.preventDefault();
     const formData = $form.serialize();
     // const $tweetsContainer = $("#tweets-container");
-
     if (!$("#tweet-text").val()) {
       alert("You didn't tweet anything! X(");
     } else if ($("#tweet-text").val().length > 140){
@@ -61,6 +58,13 @@ $(document).ready(() => {
         });
     }
   });
+
+  // reset form
+  // $("#submit-tweet").click(() => {
+  //  if (!$("#submit-tweet")){
+  //    $("form").reset();
+  //  }
+  // });
 
   const loadtweets = () => {
     $.get("/tweets")
