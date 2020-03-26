@@ -14,5 +14,17 @@ nav {
 
 nav .arrow {
   text-align: center;
-  color: #91e2e6;
+  color: #bde691;
+  margin-top: 2px;
+}
+
+nav .arrow i {
+  animation: upDown 2s infinite;
+  position: relative;
+  animation-timing-function: linear;
+}
+
+@keyframes upDown {
+  from { top: 1px; }
+  to { bottom:5px; }
 }
