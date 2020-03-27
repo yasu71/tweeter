@@ -1,13 +1,13 @@
 $(document).ready(() => {
-  let counterValue = $(".counter").val();
+  const counterValue = $(".counter").val();
   $("textarea").on("keyup", function() {
-    let length = $(this).val().length;
-    let counter = $(".counter")
+    const length = $(this).val().length;
+    const counter = $(".counter");
     $(".counter").val(counterValue - length);
-    if (length < 140){
-      counter.css("color", "#545149"); 
+    if (length < 140) {
+      counter.css("color", "#545149");
     } else if (length >= 140) {
-      counter.css("color", "#ff0000"); 
-    } 
-  })
+      counter.css("color", "#ff0000");
+    }
+  });
 });

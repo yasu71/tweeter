@@ -11,10 +11,10 @@ $(document).ready(() => {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $tweetsContainer.prepend($tweet);
-    } 
+    }
   };
 
-  const createTweetElement = function(tweet) {
+  const createTweetElement = (tweet) => {
     const $img = $("<img>").attr("src", tweet.user.avatars);
     const $profileImage = $("<div>").addClass("profile-image").append($img);
     const $profileName = $("<div>").addClass("profile-name").text(tweet.user.name);
@@ -28,13 +28,13 @@ $(document).ready(() => {
     const $secondList = $("<li>").append($secondIcon);
     const $thirdIcon = $("<i>").addClass("fas fa-heart");
     const $thirdList = $("<li>").append($thirdIcon);
-    const $ul = $("<ul>").append($firstList, $secondList, $thirdList)
+    const $ul = $("<ul>").append($firstList, $secondList, $thirdList);
     const $iconDiv = $("<div>").append($ul);
-    let $createdAt = $("<div>").addClass("posted-date");
+    const $createdAt = $("<div>").addClass("posted-date");
 
-    let date = new Date();
-    let currentDate = date.getTime();
-    let dateDifference = Math.floor((currentDate - tweet.created_at)/1000/60/60/24);
+    const date = new Date();
+    const currentDate = date.getTime();
+    const dateDifference = Math.floor((currentDate - tweet.created_at) / 1000 / 60 / 60 / 24);
     $createdAt.text(`${dateDifference} days ago`);
 
     const $footer = $("<footer>").append($createdAt, $iconDiv);
@@ -43,9 +43,13 @@ $(document).ready(() => {
     return $article;
   };
 
-  const clearErrors = function () {
+  const clearErrors = () => {
     $(".error-over-texts").hide();
     $(".error-no-tweet").hide();
+  };
+
+  const clearButtonFocus = () => {
+    $("button").blur();
   };
 
   const $form = $("form");
@@ -56,15 +60,21 @@ $(document).ready(() => {
     const formData = $form.serialize();
     if (!$("#tweet-text").val()) {
       $(".error-no-tweet").slideDown();
+      clearButtonFocus();
       return;
-    } 
-    if ($("#tweet-text").val().length > 140){
+    }
+    if ($("#tweet-text").val().length > 140) {
       $(".error-over-texts").slideDown();
+      clearButtonFocus();
       return;
-    } 
+    }
     $.post("/tweets", formData)
       .then((res) => {
         $("#tweet-text").val("");
+        $(".counter").val(140).css("color", "#545454");
+        // $("button").blur();
+        clearButtonFocus();
+
         loadtweets();
       });
   });
@@ -73,7 +83,7 @@ $(document).ready(() => {
     $.get("/tweets")
       .then((data) => {
         renderTweets(data);
-      });;
+      });
   };
 
   loadtweets();
