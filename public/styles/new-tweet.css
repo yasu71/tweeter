@@ -1,5 +1,7 @@
 .new-tweet {
   padding: 0.45em;
+  margin-bottom: 2.5em;
+  display:none;
 }
 
 .new-tweet .error-message {

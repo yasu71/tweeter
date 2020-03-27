@@ -19,6 +19,10 @@ header .avatar-image {
   position: relative;
 }
 
+header .avatar img {
+  filter: drop-shadow(1px 1px 8px #fff);
+}
+
 header h2 {
   font-weight: 300;
 } 

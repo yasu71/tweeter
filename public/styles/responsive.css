@@ -13,11 +13,15 @@
   }
 
   #profile {
-   top: 0;
+    top: 0;
   }
 
-  .container {
+  .main-container {
     top: 0;
+  }
+
+  #tweets-container {
+    margin-top: 1em;
   }
 }
 
@@ -28,15 +32,16 @@
   }
 
   #profile {
-    width: 28%;
+    width: 30%;
     margin: 3%;
     position: fixed;
+    border: 3px solid #4056a1;
   }
 
-  .container {
+  .main-container {
     width: 58%;
     margin: 3%;
-    left: 34%;
+    left: 36%;
   }
 
   .new-tweet .error-message {

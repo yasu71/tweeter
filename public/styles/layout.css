@@ -27,7 +27,7 @@ body {
 
 /****** main container START ******/
 
-.container {
+.main-container {
   width: 90%;
   margin: auto;
   background-color: #f4f1ec;
@@ -39,7 +39,7 @@ body {
 /****** tweeted post section START ******/
 
 #tweets-container {
-  margin: 2.8em 0 1em;
+  margin-bottom: 1em;
 }
 
 #tweets-container article {
@@ -79,13 +79,13 @@ body {
   width: 2.3em;
 }
 
-#tweets-container header .user-name {
+#tweets-container header .handle {
   display: none;
   color: #bec2cc;
   font-size: 0.9em;
 }
 
-#tweets-container article:hover .user-name {
+#tweets-container article:hover .handle {
   display: block;
 }
 
