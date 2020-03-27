@@ -6,7 +6,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-![!"Desktop: main tweet page with tweets"](https://github.com/yasu71/tweeter/blob/master/docs/tweet-box_desktop1.png?raw=true)
+!["Desktop: main tweet page with tweets"](https://github.com/yasu71/tweeter/blob/master/docs/tweet-box_desktop1.png?raw=true)
 
 !["Desktop: tweet compose box with a new tweet"](https://github.com/yasu71/tweeter/blob/master/docs/tweet-box_desktop2.png?raw=true)
 
