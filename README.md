@@ -10,7 +10,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["Desktop: tweet compose box with a new tweet"](https://github.com/yasu71/tweeter/blob/master/docs/tweet-box_desktop2.png?raw=true)
 
-!["Mobile: main tweet page with tweets (left), tweet compose box with a new tweet (right)"](https://github.com/yasu71/tweeter/blob/master/docs/tweet-box_desktop2.png?raw=true)
+!["Mobile: main tweet page with tweets (left), tweet compose box with a new tweet (right)"](https://github.com/yasu71/tweeter/blob/master/docs/tweet-box_monile.png?raw=true)
 
 ## Getting Started
 
