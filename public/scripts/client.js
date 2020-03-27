@@ -72,7 +72,6 @@ $(document).ready(() => {
       .then((res) => {
         $("#tweet-text").val("");
         $(".counter").val(140).css("color", "#545454");
-        // $("button").blur();
         clearButtonFocus();
 
         loadtweets();

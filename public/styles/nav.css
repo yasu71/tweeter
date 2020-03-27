@@ -18,7 +18,7 @@
 .nav-bar .arrow {
   text-align: center;
   color: #bde691;
-  margin-top: 2px;
+  margin-top: 0.12em;
 }
 
 .nav-bar .arrow i {
@@ -28,6 +28,6 @@
 }
 
 @keyframes upDown {
-  from { top: 1px; }
-  to { bottom:5px; }
+  from { top: 0.1em; }
+  to { bottom: 0.2em; }
 }
