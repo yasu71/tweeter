@@ -4,8 +4,13 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(() => {
+  
+  $(".compose-toggle-button").on("click", () => {
+    $(".new-tweet").slideToggle();
+    $("#tweet-text").focus();
+  });
 
-  const renderTweets = function(tweets) {
+  const renderTweets = (tweets) => {
     $('#tweets-container').empty();
     const $tweetsContainer = $("#tweets-container");
     for (const tweet of tweets) {
@@ -19,8 +24,8 @@ $(document).ready(() => {
     const $profileImage = $("<div>").addClass("profile-image").append($img);
     const $profileName = $("<div>").addClass("profile-name").text(tweet.user.name);
     const $tweetProfile = $("<div>").addClass("tweet-profile").append($profileImage, $profileName);
-    const $tweetUserName = $("<div>").addClass("user-name").text(tweet.user.handle);
-    const $header = $("<header>").append($tweetProfile, $tweetUserName);
+    const $handle = $("<div>").addClass("handle").text(tweet.user.handle);
+    const $header = $("<header>").append($tweetProfile, $handle);
     const $tweetContent = $("<div>").addClass("tweet-content").text(tweet.content.text);
     const $firstIcon = $("<i>").addClass("fab fa-font-awesome-flag");
     const $firstList = $("<li>").append($firstIcon);
